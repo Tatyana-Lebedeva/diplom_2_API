@@ -31,13 +31,13 @@ public class RenameUserTest extends BaseApi{
     @DisplayName("Проверка возможности изменения Email неавторизованного пользователя")
     public void renameEmailNonAuthorization(){
         Response status = userApi.rename("email",GeneratorUser.getNewEmailFaker(), "");
-        assertUser.statusOk(status);
+        assertUser.statusUnauthorized(status);
     }
     @Test
     @DisplayName("Проверка возможности изменения имени неавторизованного пользователя")
     public void renameNameNonAuthorization(){
         Response status = userApi.rename("name",GeneratorUser.getNewNameFaker(), userApi.getToken());
-        assertUser.statusOk(status);
+        assertUser.statusUnauthorized(status);
     }
     @After
     public void deleteUser(){

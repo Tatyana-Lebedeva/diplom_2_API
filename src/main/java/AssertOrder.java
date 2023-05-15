@@ -14,7 +14,7 @@ public class AssertOrder {
         status
                 .then()
                 .statusCode(SC_BAD_REQUEST)
-                .body("success",is(true));
+                .body("success",is(false));
     }
     public void statusInternalServerError(Response status){
         status
