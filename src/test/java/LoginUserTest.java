@@ -4,9 +4,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.*;
-
 public class LoginUserTest extends BaseApi{
     UserApi userApi=new UserApi();
     AssertUser assertUser= new AssertUser();

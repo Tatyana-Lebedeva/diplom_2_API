@@ -1,6 +1,5 @@
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
-import jdk.jfr.Registered;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,8 +35,9 @@ public class RenameUserTest extends BaseApi{
     @Test
     @DisplayName("Проверка возможности изменения имени неавторизованного пользователя")
     public void renameNameNonAuthorization(){
-        Response status = userApi.rename("name",GeneratorUser.getNewNameFaker(), userApi.getToken());
+        Response status = userApi.rename("name",GeneratorUser.getNewNameFaker(), "");
         assertUser.statusUnauthorized(status);
+
     }
     @After
     public void deleteUser(){
