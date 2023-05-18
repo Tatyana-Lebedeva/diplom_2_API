@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: CreateOrderTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 17.284 s <<< FAILURE! - in CreateOrderTest
+createOrderWithNonAuthorization(CreateOrderTest)  Time elapsed: 1.242 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path success doesn't match.
+Expected: is <true>
+  Actual: <false>
+
+	at CreateOrderTest.createOrderWithNonAuthorization(CreateOrderTest.java:49)
+
+createOrderWithAuthorization(CreateOrderTest)  Time elapsed: 1.125 s  <<< FAILURE!
+java.lang.AssertionError: 
+1 expectation failed.
+JSON path success doesn't match.
+Expected: is <true>
+  Actual: <false>
+
+	at CreateOrderTest.createOrderWithAuthorization(CreateOrderTest.java:30)
+
